@@ -1,0 +1,52 @@
+This is a typical template for a wordpress post. It is a good idea to put a cover image:
+<a href="an_image.png"><img class="alignnone size-full wp-image-1002" alt="alt_captino" src="http://location_of/an_image.png" width="550" height="432" /></a>
+
+<h3>A header of size 3</h3>
+<a title="link wikipedia" href="http://en.wikipedia.org/wiki/Multidimensional_scaling" target="_blank">Link to wikipedia</a> (bla), is a set of multivariate data analysis methods that are used to analyze data. 
+
+Put something funny, or interesting, or emotional, that captures the attention of your readers.
+
+<hr />
+
+<h3>Another heading</h3>
+<strong>R</strong> has a number of ways to perform different analysis. The following text is a list:
+<ul>
+  <li><span style="font-family:courier new;"><strong>item1</strong></span> (<a title="stats" href="http://stat.ethz.ch/R-manual/R-patched/library/stats/html/00Index.html" target="_blank">stats</a> by R Development Core Team)</li>
+	<li><span style="font-family:courier new;"><strong>item2</strong></span> (<a title="smacof" href="http://cran.r-project.org/web/packages/smacof/index.html" target="_blank">smacof</a> by Phillip Angels)</li>
+	<li><span style="font-family:courier new;"><strong>item3</strong></span> (<a title="vegan" href="http://cran.r-project.org/web/packages/vegan/index.html" target="_blank">vegan</a> by Albert Einstein <em>et al</em>)</li>
+</ul>
+
+
+<hr />
+
+<h4>Heading size 4</h4>
+Some highlighted code
+[sourcecode language="r"]
+# install packages
+install.packages(c("mypackae", "yourpackage"))
+
+# load packages
+library(mypackage)
+library(yourpackage)
+[/sourcecode]
+
+<h4>Yet another heading</h4>
+We will use the dataset <span style="font-family:courier new;"><strong>some_data</strong></span> that gives the road distances (in km) between 21 cities in Europe. Notice that <span style="font-family:courier new;"><strong>some_data</strong></span> is already an object of class <strong>data.frame</strong> (so what?). You can inspect the first 5 elements like so:
+
+[sourcecode language="r"]
+# bla bla bla
+mydata = as.matrix(dataset)
+
+# inspect first five elements
+mydata[1:5,1:5]
+[/sourcecode]
+
+<pre>          Athens Barcelona Brussels Calais Cherbourg
+Athens         0      3313     2963   3175      3339
+Barcelona   3313         0     1318   1326      1294
+Brussels    2963      1318        0    204       583
+Calais      3175      1326      204      0       460
+Cherbourg   3339      1294      583    460         0</pre>
+
+The goal is to write about the things that you are interested in. 
+<hr />

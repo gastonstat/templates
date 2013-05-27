@@ -1,0 +1,101 @@
+\documentclass[11pt]{article}
+\usepackage{graphicx, verbatim}
+\usepackage{alltt}
+\usepackage{enumitem}
+\usepackage{color}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{linkcolor}{rgb}{0.066,0.545,0.890}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=linkcolor,
+  linkcolor=linkcolor
+}
+\setlength{\textwidth}{6.5in} 
+\setlength{\textheight}{9in}
+\setlength{\oddsidemargin}{0in} 
+\setlength{\evensidemargin}{0in}
+\setlength{\topmargin}{-1.5cm}
+\newcommand{\mypackage}{\texttt{mypackage}}
+\newcommand{\code}[1]{\texttt{#1}}
+
+
+\begin{document}
+\title{Introduction to the R package \mypackage{}}
+\author{
+ Gaston Sanchez\\
+ \small \href{http://www.gastonsanchez.com/mypackage}{www.gastonsanchez.com/mypackage}
+}
+\date{}
+\maketitle
+
+
+%--------------------------------------------
+\section{Introduction}
+\mypackage{} is an R package designed for the solely purpose of helping you to do some stuff:
+<<plot_cover, echo=FALSE, message=FALSE, fig.width=5, fig.height=4, out.width='.9\\linewidth', out.height='.6\\linewidth', fig.align='center'>>=
+# ggplot colors
+ggcols <- function(n, alfa) {
+  hues = seq(15,375,length=n+1)
+  hcl(h=hues, l=65, c=100, alpha=alfa)[1:n]
+}
+
+# plot
+op = par(mar = c(1,1,1,1))
+plot(1:10, 1:10, pch=19, col=ggcols(10))
+par(op)
+@
+
+
+\vspace{5 mm}
+\subsection{My Package}
+This is a simple paragraph to introduce my package.
+
+For instance, you can add some plot (see the following figure):
+<<arc_diag_example, echo=FALSE, fig.width=7, fig.height=3.5, out.width='.9\\linewidth', out.height='.4\\linewidth', fig.align='center'>>=
+# graph
+op = par(mar = c(1,1,1,1))
+plot(1:10, 1:10, pch=19, cex=1:10, col=ggcols(10))
+par(op)
+@
+
+Say something interesting here.
+
+
+
+%--------------------------------------------
+\vspace{5 mm}
+\section{The R package \texttt{mypackage}}
+\texttt{mypackage} is a minimal package for plotting cool graphics in R. My main motivation for creating \texttt{mypackage} was because I was inspired one night.
+
+\paragraph{This is a table}
+The charts are plotted by \texttt{myplot()} using the \texttt{lines()} function internally. This means that the arguments are basically the arguments behind \texttt{lines()}: \\
+\begin{center}
+ \begin{tabular}{l l}
+  \texttt{col.xyz} & color for the xyz \\
+  \texttt{lwd.xyz} & line width for the xyz (default 1) \\
+  \texttt{lty} & line type for the xyz \\
+  \texttt{lend} & the line end style for the xyz \\
+  \texttt{ljoin} & the line join style for the xyz \\
+  \texttt{lmitre} & the line mitre limit for the xyz \\
+ \end{tabular}
+\end{center}
+
+
+
+%--------------------------------------------
+\vspace{5 mm}
+\section*{Some References}
+\begin{itemize}
+ \item Arc Diagrams in 'Visual Complexity' (by Manuel Lima) \\
+  \href{http://www.visualcomplexity.com/vc/index.cfm?method=Arc\%20Diagrams}{http://www.visualcomplexity.com/vc/index.cfm?method=Arc\%20Diagrams}
+ \item Protovis by Mike Bostock \\
+  \href{http://mbostock.github.com/protovis/ex/arc.html}{http://mbostock.github.com/protovis/ex/arc.html}
+ \item Arc Diagrams: Visualizing Structure in Strings by Martin Wattenberg \\
+  \href{http://hint.fm/papers/arc-diagrams.pdf}{http://hint.fm/papers/arc-diagrams.pdf}
+ \item R-chie: A web server and R package for plotting arc diagrams of RNA secondary structures (by Daniel Lai, Jeff R. Proctor, Jing Yun A. Zhu, and Irmtraud M. Meyer) \\
+  \href{http://www.e-rna.org/r-chie/index.cgi}{http://www.e-rna.org/r-chie/index.cgi}
+\end{itemize}
+
+
+\end{document}

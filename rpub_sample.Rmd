@@ -1,0 +1,42 @@
+<font color="#645fde">A Big Title</font>
+========================================================
+by [Gaston Sanchez](http://www.gastonsanchez.com)
+
+### Intro
+In this Rpub, we are going to talk about different options in R for producing **cool stuff** in order to visualize some data, like the figure below:
+
+```{r fig.width=7, fig.height=7, message=FALSE, echo=FALSE}
+library(corrgram)
+library(FactoMineR)
+data(decathlon)
+R = cor(decathlon[,1:10])
+corrgram(R, lower.panel=panel.shade, upper.panel=NULL)
+title("Example of a Correlogram", cex.main=0.9)
+```
+
+
+<hr>
+## Section 1
+The most common use of the term **bold letters** refers to *some words in italics*. However, there is another use for **bold letters** that has nothing to do with boring stories.
+
+If you want to add an R chunck:
+```{r hello, message=FALSE}
+# some comment
+x = 1:10
+y = 10:1
+```
+
+
+### Subsection ```script```
+The main function in **package_name** is ```some_function()```. The main argument for this function is either a data frame with the data or a matrix of correlations.
+
+<hr>
+You can plot this:
+```{r plot, fig.width=7, fig.height=7}
+# some plot
+plot(x, y, pch=20, col=rainbow(10))
+```
+
+
+You can add some html format like this: <span style="font-family:courier new;"><strong><font color="#FF5347">moenia</font></strong></span> is one of my preferred music groups.
+

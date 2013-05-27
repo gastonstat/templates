@@ -1,0 +1,64 @@
+% !Rnw root = ../book_sample.Rnw
+
+
+\chapter{Introduction}
+This book provides a hands-on introduction to some really cool stuff. Although there are a few texts that cover the theoretical aspects of XYZ with some applications to real data, there are virtually no textbooks that teach how to use XYZ and how to handle its broad range of applications with the existing XYZ software.
+
+
+\section{Hello Berkeley}
+Most Star Wars fans know that the movie was filmed under the title \textit{Blue Harvest: Horror Beyond Imagination} to avoid publicity, but it’s less-known that the bogus title was a play on Dashiell Hammet’s 1929 novel \textit{Red Harvest}, which was said to be an influence for Akira Kurosawa's \textit{Yojimbo}, which was cited as an influence for Star Wars. See how it all comes together?
+
+\begin{itemize}
+ \item Item one
+ \item Item two
+ \item Item three
+\end{itemize}
+
+
+Some code in R:
+<<example>>=
+# check this
+x <- 3
+
+# now check this
+y = 3
+@
+What a boring example! 
+
+
+Some quotation:
+\vspace{2mm}
+\begin{quotation} \noindent
+\textit{May the \textbf{Force} be with you.}
+\end{quotation}
+
+
+Some stupid table:
+
+\begin{table}[h]
+ \caption{Description of variables in data \code{starwars}} 
+ \centering
+ \begin{tabular}{l l}
+  \hline
+  Variable & Description \\
+  \hline
+  \code{X} & song the Ewoks perform at the end of the movie  \\
+  \code{Y} & Harrison Ford wanted Han Solo to die in the movie \\
+  \code{Z} & the one word C3PO says to the Ewoks is ``Naboo'' \\
+  \hline
+ \end{tabular}
+ \label{tab:starwars}
+\end{table}
+
+
+
+
+\section{Reading List}
+Instead of having a long boring list of references at the end of the book, I've decided to provide at the end of every chapter a suggested reading list with the main references of the discussed material.
+
+\begin{itemize}
+ \vspace{2mm}
+ \item \textbf{\textsf{First Book}} by Darth Vader (2012). A very nice book about the dark side of the force.
+
+\vspace{2mm}
+ \item \textbf{\textsf{A paper}} by Luke Skywalker (2009). This is a technical article on how to become a Jedi.

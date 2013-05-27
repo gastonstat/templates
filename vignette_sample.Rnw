@@ -1,0 +1,50 @@
+\documentclass{article}
+\usepackage{upquote}
+\usepackage{geometry}
+\geometry{verbose,tmargin=2.5cm,bmargin=2.5cm,lmargin=2.5cm,rmargin=2.5cm}
+\setlength{\parindent}{0in}
+
+% \VignetteIndexEntry{Introduction to package_name}
+% \VignetteEngine{knitr}
+
+\begin{document}
+\title{Introduction to \texttt{package_name}}
+\author{
+ Gaston Sanchez
+}
+\date{}
+\maketitle
+
+
+\section{Introduction}
+This is a template for a vignette. A vignette would say something like this: \texttt{package_name} is an R package designed to provide a set of handy functions for making your life easier.
+
+\vspace{2mm}
+Use this paragraph to talk more about your package and how people can benefit from it.
+
+
+
+\section{Some Examples}
+To use \texttt{package_name} (once you have installed it), simply load it with the function \texttt{library()}:
+<<load_turnlist, eval=FALSE>>=
+# load package turnlist
+library(package_name)
+@
+
+
+\subsection*{Data in Blocks}
+To see how we can apply \texttt{package_name}, we need to consider some data under a multiblock perspective. First let's start by creating a data matrix with 10 observations and 9 variables.
+<<data_matrix>>=
+# create a matrix
+set.seed = 21
+some_data = round(matrix(rnorm(90), 10, 9), 3)
+rownames(some_data) = 1:10
+colnames(some_data) = paste("X", 1:9, sep='')
+
+# take a peek
+head(some_data, n=5)
+@
+
+
+
+\end{document}
